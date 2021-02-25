@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+export FF_DIR=$(pwd)
+
+#Synthetic trace
+export SSG=${FF_DIR}/SSG/traceset-zipf/pcap_split
+
+
+# VPP
+export VPP_ROOT=${FF_DIR}/vpp
+export EXP_RES=${FF_DIR}/Results
+
+# DPDK
+export RTE_SDK=$VPP_ROOT/build-root/build-vpp-native/external/dpdk-19.08
+export RTE_TARGET=x86_64-native-linuxapp-gcc
+
+# MoonGen
+export MGSCR=${FF_DIR}/MoonGen_parser/
+
+# Config
+export STARTUP_CONF=${FF_DIR}/tools_vpp/startup.conf
+export STARTUP_CONF2=${FF_DIR}/tools_vpp/startup_dpdk.conf
+export PATH=$PATH:$CONFIG_DIR:$RTE_SDK/usertools:$VPP_ROOT/build-root/build-tool-native/tools
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:$VPP_ROOT/build-root/install-vpp-native/vpp/include
+export BINS="$VPP_ROOT/build-root/install-vpp-native/vpp/bin"
+export PLUGS="$VPP_ROOT/build-root/install-vpp-native/vpp/lib/vpp_plugins"
+
+export SFLAG="env PATH=$PATH:$BINS"

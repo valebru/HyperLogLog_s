@@ -1,0 +1,23 @@
+set nsim delay 1.0 ms bandwidth 10 gbit packet-size 128 
+
+packet-generator new { 
+name s0_miceflows 
+limit 10000000
+size 128-128 
+interface loop0 
+node ethernet-input 
+data { IP4: 1.2.3 -> 4.5.6 UDP: 11.12.33.2 - 11.12.35.200 -> 11.12.34.2 - 11.12.34.240 UDP: 1234 -> 2345 incrementing 114 } 
+}
+
+ 
+packet-generator new { 
+name s1_topflows 
+limit 10000000 
+size 128-128 
+interface loop0 
+node ethernet-input 
+data { IP4: 1.2.3 -> 4.5.6 UDP: 11.22.33.2 - 11.22.33.12 -> 11.22.34.2 - 11.22.39.200 UDP: 1234 -> 2345 incrementing 114 } 
+} 
+
+packet-generator enable s0_miceflows
+packet-generator enable s1_topflows

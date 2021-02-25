@@ -1,0 +1,12 @@
+set nsim delay 1.0 ms bandwidth 10 gbit packet-size 128 
+
+packet-generator new { 
+name pcap_file0 
+limit 10000000 
+size 128-128 
+interface loop0 
+node ethernet-input 
+pcap ../tools_res/capture.pcap 
+} 
+
+packet-generator enable pcap_file0

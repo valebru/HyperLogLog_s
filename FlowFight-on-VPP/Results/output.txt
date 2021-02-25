@@ -1,0 +1,5 @@
+0.909090909091 0.0219661491385 29.2381818182 /home/valerio/FlowFight-on-VPP/Results/Basetest_res_15-10_05-17.txt
+0.909090909091 0.0219661491385 29.2381818182 /home/valerio/FlowFight-on-VPP/Results/Basetest_res_15-10_05-20.txt
+0.909090909091 0.0219661491385 29.2381818182 /home/valerio/FlowFight-on-VPP/Results/Basetest_res_15-10_05-22.txt
+0.909090909091 0.0219661491385 29.2381818182 /home/valerio/FlowFight-on-VPP/Results/Basetest_res_15-10_05-24.txt
+0.92 0.0633609171451 107.1046 /home/valerio/FlowFight-on-VPP/Results/Basetest_res_15-10_05-30.txt
